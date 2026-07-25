@@ -1,0 +1,1 @@
+# .clang-format-for-linux-coding-style
