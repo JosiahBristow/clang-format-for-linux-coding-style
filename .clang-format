@@ -1,0 +1,70 @@
+# 基于 Linux 内核编码风格，保留 Tab 缩进，宽度设为 4
+BasedOnStyle: LLVM
+UseTab: ForIndentation            # 仅缩进使用 Tab，对齐使用空格（推荐）
+# UseTab: Always                 # 如果希望对齐也用 Tab，改用此行
+TabWidth: 8                       # Tab 宽度显示为 8 个空格
+IndentWidth: 8                    # 缩进宽度为 8（与 TabWidth 一致）
+ColumnLimit: 80
+
+# 访问修饰符偏移（与内核风格一致）
+AccessModifierOffset: -4
+
+# 对齐相关（禁止多数自动对齐）
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignOperands: true
+AlignTrailingComments: false
+
+# 不允许短语句写在一行
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortBlocksOnASingleLine: false
+
+# 大括号换行规则
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterFunction: true             # 函数大括号另起一行
+  AfterControlStatement: false    # if/for/while 大括号不换行
+  AfterClass: false
+  AfterEnum: false
+  AfterNamespace: false
+  AfterStruct: false
+
+# 其他 Linux 风格细节
+AlwaysBreakAfterReturnType: None
+BinPackArguments: true
+BinPackParameters: true
+BreakBeforeBinaryOperators: None
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+DerivePointerAlignment: false
+PointerAlignment: Right
+IncludeBlocks: Preserve
+IndentCaseLabels: false
+IndentWrappedFunctionNames: false
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: None
+PenaltyBreakAssignment: 10
+PenaltyBreakBeforeFirstCallParameter: 30
+PenaltyBreakComment: 10
+PenaltyBreakFirstLessLess: 0
+PenaltyBreakString: 10
+PenaltyExcessCharacter: 100
+PenaltyReturnTypeOnItsOwnLine: 60
+SortIncludes: false
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInContainerLiterals: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+Standard: c++03
